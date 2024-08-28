@@ -428,6 +428,7 @@ const hld21 = cl[195]; //5
 const hld22 = cl[133]; //7
 const hld23 = cl[183]; //3
 
+
 const hld24 = cl[116]; //9
 const hld25 = cl[237]; //0
 const hld26 = cl[175]; //1
@@ -2005,7 +2006,28 @@ document.querySelectorAll(cy[14]).forEach((e=>{let l=document.querySelectorAll(c
 	});
 });*/
 //document.querySelectorAll(".urocc").forEach((e=>{let t=e.previousElementSibling,c=e.parentElement,s=e.scrollHeight+"px";t.addEventListener("click",(()=>{e.classList.toggle("urcac")?(e.style.maxHeight=s,t.classList.add("urbac")):(t.classList.remove("urbac"),e.removeAttribute("style"))})),document.addEventListener("click",(s=>{c.contains(s.target)||(e.classList.remove("urcac"),t.classList.remove("urbac"),e.removeAttribute("style"))}))}));
-document.querySelectorAll(cy[2]).forEach((e=>{let t=e.previousElementSibling,c=e.parentElement,s=e.scrollHeight+cl[194];t.addEventListener(cl[16],(()=>{e.classList.toggle(cy[7])?(e.style.maxHeight=s,t.classList.add(cy[22])):(t.classList.remove(cy[22]),e.removeAttribute(cl[216]))})),document.addEventListener(cl[16],(s=>{c.contains(s.target)||(e.classList.remove(cy[7]),t.classList.remove(cy[22]),e.removeAttribute(cl[216]))}))}));
+//document.querySelectorAll(cy[2]).forEach((e=>{let t=e.previousElementSibling,c=e.parentElement,s=e.scrollHeight+cl[194];t.addEventListener(cl[16],(()=>{e.classList.toggle(cy[7])?(e.style.maxHeight=s,t.classList.add(cy[22])):(t.classList.remove(cy[22]),e.removeAttribute(cl[216]))})),document.addEventListener(cl[16],(s=>{c.contains(s.target)||(e.classList.remove(cy[7]),t.classList.remove(cy[22]),e.removeAttribute(cl[216]))}))}));
+
+document.querySelectorAll(".urocc").forEach(function(container) { //urocc: user reviews open close content
+	let theSwitch = container.previousElementSibling;
+	let commentSection = container.parentElement;
+
+	theSwitch.addEventListener("click", function() {
+		if(container.classList.toggle("urcac")){ //urcac: user reviews content active
+			theSwitch.classList.add("urbac"); //urbac: user reviews button active
+		} else {
+			theSwitch.classList.remove("urbac");
+		}
+	});
+
+	document.addEventListener("click", function(event) {
+		if (!commentSection.contains(event.target)) {
+			container.classList.remove("urcac");
+			theSwitch.classList.remove("urbac");
+		}
+	});
+});
+
 //[.urocc] == body variable  cy[2]
 //[px] == head variable  cl[194]
 //[click] == head variable  cl[16]
@@ -2066,6 +2088,7 @@ document.querySelectorAll(cy[65]).forEach((e=>{let t=e.nextElementSibling.nextEl
 });*/
 //document.querySelectorAll(".seres>svg").forEach((e=>{let l=e.parentElement.previousElementSibling.previousElementSibling;e.addEventListener("click",(()=>{l.value=""}))}));
 //(ReadableBasic)//document.querySelectorAll(".seres>svg").forEach((e=>{let l=e.parentElement.previousElementSibling.previousElementSibling;e.addEventListener("click",(()=>{l.value=""}))}));
+
 ////veryveryBasic
 document.querySelectorAll(cy[72]+cy[89]).forEach((e=>{let l=e.parentElement.previousElementSibling.previousElementSibling;e.addEventListener(cl[16],(()=>{l.value=cl[190]}))}));
 //[.seres]+[>svg] == body variable  cy[72]+cy[89]
@@ -2454,6 +2477,7 @@ document.querySelectorAll(cy[110]).forEach((e=>{e.parentElement.firstElementChil
 /*for(var sL = document.querySelectorAll(".itind"), s = 0; s < sL.length; s++) {
 	sL[s].parentElement.parentElement.parentElement.classList.add("mchls");
 	//mchls: main container height look same
+
 }*/
 /*for(let sL = document.querySelectorAll(".itind"), s = 0; s < sL.length; s++) {
 	sL[s].parentElement.parentElement.parentElement.classList.add("mchls");
