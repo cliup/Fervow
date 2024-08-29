@@ -2740,6 +2740,24 @@ for(let e=document.querySelectorAll(cy[112]+cy[129]+cy[119]),l=0;l<e.length;l++)
 //console.log();
 
 
+
+/////////////// *!* Accordion *!* \\\\\\\\\\\\\\\\
+document.querySelectorAll(".aocbu").forEach(trigger => trigger.addEventListener("click", function () {
+	//aocbu: accordion open close button
+	const thisItem = this.parentElement;
+	document.querySelectorAll(".aocsi").forEach(item => {
+		//aocsi: accordion open close single item
+		if (thisItem == item) {
+			thisItem.classList.toggle("aocia");
+			//aocia: accordion open close item active
+			return;
+		}
+		item.classList.remove("aocia");
+	});
+}));
+
+
+
 //////////////////////////////////////////////////////////// Apply FooterCredit Starts
 //If this element is available, set this style
 //themeCopyrightLinkShopName == manuallyEnteredShopName && null != footerSection && themeCopyrightLink == manuallyEnteredCopyrightLink ? footerSection.setAttribute("style", blockLevelStyles) : qB.w(); //If individual styles, displayBlock+unHideItems+positionItems
