@@ -1234,17 +1234,17 @@ for(let e=document.querySelectorAll(cy[27]),o=0;o<e.length;o++)e[o].remove();
 
 
 /////////// *!* 9 Column Responsive Grid *!* \\\\\\\\\\\\\
-/*if (document.querySelectorAll(".nicgr").length > 0 && window.matchMedia("(min-width: 320px)").matches) for (var d = document.querySelectorAll(".nicgr"), e = 0; e < d.length; e++) {
-	var a = d[e].childElementCount,
+if (document.querySelectorAll(".nicgr").length > 0 && window.matchMedia("(min-width: 320px)").matches) for (let d = document.querySelectorAll(".nicgr"), e = 0; e < d.length; e++) {
+	let a = d[e].childElementCount,
 		i = d[e].classList;
 	if (window.matchMedia("(min-width: 320px) and (max-width: 409px)").matches) 0 !== (a > 1 && a % 2) && i.add("etfco");
 	else if (window.matchMedia("(min-width: 410px) and (max-width: 629px)").matches) {
 		2 === (a > 1 && a % 3) && i.add("etstw")
 	} else if (window.matchMedia("(min-width: 630px)").matches) {
-		var n = a > 1 && a % 9;
+		let n = a > 1 && a % 9;
 		0 == n && 0 !== n ? i.add("enoon") : 1 === n ? i.add("enson") : 2 === n ? i.add("enstw") : 3 === n ? i.add("ensth") : 4 === n ? i.add("ensfo") : 5 === n ? i.add("ensfi") : 6 === n ? i.add("enssi") : 7 === n ? i.add("ensse") : 8 === n && i.add("ensei")
 	}
-}*/
+}
 
 
 
