@@ -5,6 +5,10 @@
 
 Change Log:
 
+Version 2.00
+Cliup
+https://ampleupdates.com/
+
 Version 1.19
 Cliup
 https://ampleupdates.com/
@@ -22,7 +26,8 @@ Blog url: https://fervow.blogspot.com/
 
 Scipts List (All the basics + the following)
 
-00 Remove Empty Sections 
+00 Remove Empty Sections
+00 9 Column Responsive Grid
 01 Static Image Cropping 
 02 Static Image Cropping: Intersection Observer
 03 Fullpost Image srcset
@@ -58,6 +63,7 @@ Scipts List (All the basics + the following)
 33 Intersection Observer YouTube Video Play Pause
 34 If no content, left side container look same as right container height
 35 Remove Comment Anchor Link
+00 YouTube Video Loading
 36 Copyright Year Update
 37 Show Domain Name Only
 38 Onclick change the current theme mode
@@ -1224,6 +1230,21 @@ const themeCopyrightLinkShopName = u != typeof inlineStyles ? copyrightAnchorlin
 for(let e=document.querySelectorAll(cy[27]),o=0;o<e.length;o++)e[o].remove();
 //[.no-items.section]  == body variable  cy[27]
 //console.log();
+
+
+
+/////////// *!* 9 Column Responsive Grid *!* \\\\\\\\\\\\\
+if (document.querySelectorAll(".nicgr").length > 0 && window.matchMedia("(min-width: 320px)").matches) for (var d = document.querySelectorAll(".nicgr"), e = 0; e < d.length; e++) {
+	var a = d[e].childElementCount,
+		i = d[e].classList;
+	if (window.matchMedia("(min-width: 320px) and (max-width: 409px)").matches) 0 !== (a > 1 && a % 2) && i.add("etfco");
+	else if (window.matchMedia("(min-width: 410px) and (max-width: 629px)").matches) {
+		2 === (a > 1 && a % 3) && i.add("etstw")
+	} else if (window.matchMedia("(min-width: 630px)").matches) {
+		var n = a > 1 && a % 9;
+		0 == n && 0 !== n ? i.add("enoon") : 1 === n ? i.add("enson") : 2 === n ? i.add("enstw") : 3 === n ? i.add("ensth") : 4 === n ? i.add("ensfo") : 5 === n ? i.add("ensfi") : 6 === n ? i.add("enssi") : 7 === n ? i.add("ensse") : 8 === n && i.add("ensei")
+	}
+}
 
 
 
@@ -2738,6 +2759,14 @@ for(var commentA = document.querySelectorAll("[class*=nt-he] a, [class*=ent-co] 
 for(let e=document.querySelectorAll(cy[112]+cy[129]+cy[119]),l=0;l<e.length;l++)e[l].outerHTML=e[l].innerHTML;
 //[[class*=]+[nt-he] a, []+[class*=ent-co] a] == body variable  cy[112]+cy[129]+cy[119]
 //console.log();
+
+
+
+/////////////// *!* YouTube Video Loading *!* \\\\\\\\\\\\\\\\
+//document.querySelectorAll(".pvwtf").forEach(((e)=>{let t=e.dataset.ipvws,o=document.createElement("iframe");o.setAttribute("frameborder","0"),o.setAttribute("allowfullscreen",""),o.setAttribute("srcdoc","<style>*{margin:0;overflow:hidden;padding:0;}html,body{height:100%;}img,svg{bottom:0;margin:auto;position:absolute;top:0;width:100%;}svg{filter:drop-shadow(1px 1px 15px #ffffff);transition:all 500ms ease-in-out;}body:hover svg{filter:drop-shadow(1px 1px 10px #ff0000);transform:scale(1.2);}body:active svg{transform:scale(0.5);}</style><a href='https://www.youtube.com/embed/"+t+"?autoplay=1'><img src='https://img.youtube.com/vi/"+t+"/maxresdefault.jpg' alt='Video Title'><svg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 24 24' fill='none' stroke='#ff1515' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg></a>"),o.setAttribute("allow","accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"),o.setAttribute("src","https://www.youtube.com/embed/"+t+"?rel=0&showinfo=0&autoplay=1"),e.innerHTML="",e.appendChild(o)}));  
+document.querySelectorAll(".pvwtf").forEach(((e)=>{let t=e.dataset.ipvws,o=document.createElement("iframe");o.setAttribute("frameborder","0"),o.setAttribute("allowfullscreen",""),o.setAttribute("srcdoc","<style>*{margin:0"+lv[3]+"overflow:hidden"+lv[3]+"padding:0"+lv[3]+"}html,body{height:100%"+lv[3]+"}img,svg{bottom:0"+lv[3]+"margin:auto"+lv[3]+"position:absolute"+lv[3]+"top:0"+lv[3]+"width:100%"+lv[3]+"}svg{filter:drop-shadow(1px 1px 15px #ffffff)"+lv[3]+"transition:all 500ms ease-in-out"+lv[3]+"}body:hover svg{filter:drop-shadow(1px 1px 10px #ff0000)"+lv[3]+"transform:scale(1.2)"+lv[3]+"}body:active svg{transform:scale(0.5)"+lv[3]+"}</style><a href='https://www.youtube.com/embed/"+t+"?autoplay=1'><img src='https://img.youtube.com/vi/"+t+"/maxresdefault.jpg' alt='Video Title'><svg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 24 24' fill='none' stroke='#ff1515' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg></a>"),o.setAttribute("allow","accelerometer"+lv[3]+" autoplay"+lv[3]+" clipboard-write"+lv[3]+" encrypted-media"+lv[3]+" gyroscope"+lv[3]+" picture-in-picture"),o.setAttribute("src","https://www.youtube.com/embed/"+t+"?rel=0&showinfo=0&autoplay=1"),e.innerHTML="",e.appendChild(o)}));  
+//lv[3]
+
 
 
 
